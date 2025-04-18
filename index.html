@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Method, Function & Procedure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <style>
+    .slide {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .code-style {
+      background-color: #f4f4f4;
+      color: #333;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* Ensures slides are responsive */
+    .container {
+      max-width: 100%;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .code-style {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="container mx-auto p-4">
+    <div id="slides" class="space-y-6">
+
+      <!-- Slide 1: Perkenalan -->
+      <div class="slide active" id="slide-1">
+        <h1 class="text-3xl font-bold">Selamat Datang!</h1>
+        <div id="lottie-slide-1" class="w-full h-64 my-4"></div>
+        <p class="mt-4">Di website pembelajaran Method, Function, Procedure dan Parameter! Yuk kita belajar dengan cara santai, kayak baca buku anak-anak tapi isinya codingan 😁</p>
+      </div>
+
+      <!-- Slide 2: Penjelasan Method -->
+      <div class="slide" id="slide-2">
+        <h2 class="text-2xl font-bold">Apa Itu Method? 🍼</h2>
+        <div id="lottie-slide-2" class="w-full h-64 my-4"></div>
+        <p class="mt-4">Bayangin kamu punya robot, dan kamu bilang ke dia: "Robot, bersihin kamar!" Nah, perintah "bersihin kamar" itu adalah method. Jadi, method = perintah yang robot bisa lakuin.</p>
+      </div>
+
+      <!-- Slide 3: Implementasi Method -->
+      <div class="slide" id="slide-3">
+        <h2 class="text-2xl font-bold">Contoh Method di Java 👨‍💻</h2>
+        <div id="lottie-slide-3" class="w-full h-64 my-4"></div>
+        <pre class="code-style"><code>public class Robot {
+  void bersihKamar() {
+    System.out.println("Kamar sudah bersih!");
+  }
+}</code></pre>
+      </div>
+
+      <!-- Slide 4: Function itu apa -->
+      <div class="slide" id="slide-4">
+        <h2 class="text-2xl font-bold">Apa Itu Function? 🍭</h2>
+        <div id="lottie-slide-4" class="w-full h-64 my-4"></div>
+        <p class="mt-4">Function kayak method juga, tapi dia bisa ngasih kamu hadiah alias *hasil*. Misal kamu tanya: "Function, berapa 2+2?" dia jawab: "4"</p>
+      </div>
+
+      <!-- Slide 5: Implementasi Function Java -->
+      <div class="slide" id="slide-5">
+        <h2 class="text-2xl font-bold">Contoh Function di Java 📐</h2>
+        <div id="lottie-slide-5" class="w-full h-64 my-4"></div>
+        <pre class="code-style"><code>int tambah(int a, int b) {
+  return a + b;
+}</code></pre>
+      </div>
+
+      <!-- Slide 6: Apa Itu Procedure -->
+      <div class="slide" id="slide-6">
+        <h2 class="text-2xl font-bold">Apa Itu Procedure? 🛠️</h2>
+        <div id="lottie-slide-6" class="w-full h-64 my-4"></div>
+        <p class="mt-4">Procedure itu kayak method juga, tapi dia biasanya gak ngasih hasil. Kayak disuruh nyapu halaman. Dia kerja, tapi gak bilang "saya udah selesai", dia tinggal pergi aja wkwk.</p>
+      </div>
+
+      <!-- Slide 7: Implementasi Procedure Java -->
+      <div class="slide" id="slide-7">
+        <h2 class="text-2xl font-bold">Contoh Procedure di Java 🧹</h2>
+        <div id="lottie-slide-7" class="w-full h-64 my-4"></div>
+        <pre class="code-style"><code>void nyapuHalaman() {
+  System.out.println("Halaman disapu bersih");
+}</code></pre>
+      </div>
+
+      <!-- Slide 8: Apa Itu Parameter -->
+      <div class="slide" id="slide-8">
+        <h2 class="text-2xl font-bold">Apa Itu Parameter? 📦</h2>
+        <div id="lottie-slide-8" class="w-full h-64 my-4"></div>
+        <p class="mt-4">Parameter itu kayak barang bawaan buat method atau function. Misalnya kamu bilang: "Robot, nyalain lampu di kamar!" Nah, "di kamar" itu parameternya.</p>
+      </div>
+
+      <!-- Slide 9: Implementasi Parameter Java -->
+      <div class="slide" id="slide-9">
+        <h2 class="text-2xl font-bold">Contoh Parameter di Java 🔌</h2>
+        <div id="lottie-slide-9" class="w-full h-64 my-4"></div>
+        <pre class="code-style"><code>void nyalainLampu(String ruangan) {
+  System.out.println("Lampu di " + ruangan + " dinyalakan.");
+}</code></pre>
+      </div>
+
+    </div>
+
+    <!-- Tombol Kembali dan Next -->
+    <div class="mt-6 flex justify-between flex-wrap gap-4">
+      <button onclick="prevSlide()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 w-full sm:w-auto">⬅️ Kembali</button>
+      <button onclick="nextSlide()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full sm:w-auto">Next ➡️</button>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 9;
+
+    function nextSlide() {
+      document.getElementById(`slide-${currentSlide}`).classList.remove('active');
+      currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+      document.getElementById(`slide-${currentSlide}`).classList.add('active');
+    }
+
+    function prevSlide() {
+      document.getElementById(`slide-${currentSlide}`).classList.remove('active');
+      currentSlide = currentSlide > 1 ? currentSlide - 1 : totalSlides;
+      document.getElementById(`slide-${currentSlide}`).classList.add('active');
+    }
+
+    const animations = [
+      'https://assets6.lottiefiles.com/packages/lf20_0yfsb3a1.json',
+      'https://assets6.lottiefiles.com/packages/lf20_tutvdkg0.json',
+      'https://assets3.lottiefiles.com/packages/lf20_sSF6EG.json',
+      'https://assets5.lottiefiles.com/packages/lf20_puciaact.json',
+      'https://assets4.lottiefiles.com/packages/lf20_lk80fpsm.json',
+      'https://assets6.lottiefiles.com/packages/lf20_0yfsb3a1.json',
+      'https://assets3.lottiefiles.com/packages/lf20_sSF6EG.json',
+      'https://assets3.lottiefiles.com/packages/lf20_sSF6EG.json',
+      'https://assets6.lottiefiles.com/packages/lf20_tutvdkg0.json'
+    ];
+
+    animations.forEach((url, index) => {
+      lottie.loadAnimation({
+        container: document.getElementById(`lottie-slide-${index + 1}`),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: url
+      });
+    });
+  </script>
+</body>
+
+</html>
